@@ -7,6 +7,7 @@ export const handlers = [
                 { name: 'Chocolate', imagePath: '/images/chocolate.png' },
                 { name: 'Vanilla', imagePath: '/images/vanilla.png' },
             ])
+           
         )
     }),
 
@@ -16,5 +17,8 @@ export const handlers = [
             { name: 'M&Ms', imagePath: '/images/m-and-ms.png' },
             { name: 'Hot fudge', imagePath: '/images/hot-fudge.png' },
         ]))
+    }),
+    rest.post('http://localhost:3030/order',(req,res,ctx) =>{
+        return res(ctx.json({orderName: 1006367551}))
     })
 ]
